@@ -1,0 +1,18 @@
+﻿<Window x:Class="SneakerStoreAppWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sneaker Store ORM" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Button x:Name="BtnLoad" Content="Загрузить данные" Click="BtnLoad_Click" Width="130" Height="30"/>
+            <Button x:Name="BtnAdd" Content="Добавить клиента" Click="BtnAdd_Click" Margin="10,0,0,0" Width="130"/>
+        </StackPanel>
+
+        <DataGrid x:Name="DataGridCustomers" Grid.Row="1" Margin="10" AutoGenerateColumns="True" IsReadOnly="True"/>
+    </Grid>
+</Window>
